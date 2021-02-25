@@ -4,21 +4,26 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
-    public int getHourlyRate() {
+    public Employee(int baseSalary, int hourlyRate) {
+        setBaseSalary(baseSalary);
+        setHourlyRate(hourlyRate);
+    }
+
+    private int getHourlyRate() {
         return hourlyRate;
     }
 
-    public void setHourlyRate(int hourlyRate) {
+    private void setHourlyRate(int hourlyRate) {
         if(hourlyRate <= 0)
             throw new IllegalArgumentException("Hourly rate cannot be 0 or negative.");
         this.hourlyRate = hourlyRate;
     }
 
-    public int getBaseSalary() {
+    private int getBaseSalary() {
         return baseSalary;
     }
 
-    public void setBaseSalary(int baseSalary) {
+    private void setBaseSalary(int baseSalary) {
         if(baseSalary <= 0)
             throw new IllegalArgumentException("Base salary cannot be 0 or negative.");
         this.baseSalary = baseSalary;
